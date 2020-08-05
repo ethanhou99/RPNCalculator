@@ -10,6 +10,10 @@ public class ErrorHandler {
                 "parameters");
     }
 
+    public void print(String[] input, int index) {
+        System.out.println("Your input '" + input[index] + "' in index" + index + " was invalid, please input again");
+    }
+
     public void print(List<String> failedNum) {
         if (failedNum.size() > 1) {
             System.out.print("the ");

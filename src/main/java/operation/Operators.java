@@ -1,5 +1,9 @@
 package operation;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public enum Operators {
     ADD ("+"),
     SUB ("-"),
@@ -8,6 +12,8 @@ public enum Operators {
     SQRT ("sqrt"),
     UNDO ("undo"),
     CLEAR ("clear");
+
+    final public static Set<String> set = new HashSet<>(Arrays.asList("+", "-", "*", "/", "sqrt", "undo", "clear"));
 
     private String action;
 
