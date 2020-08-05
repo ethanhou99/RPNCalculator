@@ -6,7 +6,8 @@ This is a commandline-based Reverse Polish Notation(RPN) calculator.
 - Maven Build tool
 - Junit 4.12
 
-## Compiling
+## Run the program
+```java -jar target/RPNCalculator-1.0-SNAPSHOT.jar```
 
 ## Unit Test
 ```mvn test```
