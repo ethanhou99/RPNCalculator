@@ -61,6 +61,12 @@ public class RpnCalculator {
                                     Multiplication.run(numStack);
                                     break;
                                 case DIV:
+                                    if (numStack.peekFirst() == 0) {
+                                        handler.zeroDivisor(inputArray, i);
+                                        error = true;
+                                        handler.print(op, i);
+                                        break;
+                                    }
                                     Division.run(numStack);
                                     break;
                                 case SQRT:
