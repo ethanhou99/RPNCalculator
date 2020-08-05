@@ -1,9 +1,13 @@
 package operation;
 
-import com.sun.corba.se.spi.orb.Operation;
-
 import java.util.Deque;
 
+
+/**
+ * @ClassName: Addition
+ * @Description: Define a Addidtion class to calculate the addition result
+ * @author Yicun Hou
+ */
 public final class Addition {
     public static Double run(Deque<Double> numStack) {
         double numb = numStack.pollFirst();

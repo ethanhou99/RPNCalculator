@@ -4,6 +4,13 @@ import operation.Operators;
 
 import java.util.List;
 
+
+
+/**
+ * @ClassName: ErrorHandler
+ * @Description: Define a ErrorHandler class to handle all the error situations
+ * @author Yicun Hou
+ */
 public class ErrorHandler {
     public void print(Operators op, int index) {
         System.out.println ("operator " + op.getAction() + " (position: " + index + "): insufficient " +

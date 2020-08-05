@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+
+/**
+ * @ClassName: Operation
+ * @Description: Define a Enum class of operations
+ * @author Yicun Hou
+ */
 public enum Operators {
     ADD ("+"),
     SUB ("-"),

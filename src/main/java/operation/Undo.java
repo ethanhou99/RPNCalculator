@@ -2,6 +2,13 @@ package operation;
 
 import java.util.LinkedList;
 
+
+
+/**
+ * @ClassName: Undo
+ * @Description: Define a Undo class to implement the undo function
+ * @author Yicun Hou
+ */
 public class Undo {
     public static void run(LinkedList<Object> history, LinkedList<Double> numStack) {
         if (history.size() > 0) {

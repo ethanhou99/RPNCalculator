@@ -2,6 +2,12 @@ package util;
 
 import operation.Operators;
 
+
+/**
+ * @ClassName: InputChecker
+ * @Description: Define a InputerChecker class to check if the input is valid
+ * @author Yicun Hou
+ */
 public class InputChecker {
     private final static String NUMREGEX = "\\d+";
     public static int check(String[] input) {

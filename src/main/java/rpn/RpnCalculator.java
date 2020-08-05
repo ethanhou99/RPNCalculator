@@ -7,14 +7,22 @@ import util.StackPrint;
 
 import java.util.*;
 
+/**
+ * @ClassName: RpnCalculator
+ * @Description: Define a RpnCalculator class
+ * @author Yicun Hou
+ */
 public class RpnCalculator {
+    //using the numStack to save curr result
     private final LinkedList<Double> numStack;
+    //using the history stack to save all the operation
     private final LinkedList<Object> history;
 
     public RpnCalculator() {
         numStack  = new LinkedList<>();
         history = new LinkedList<>();
     }
+
 
     public void calculate(String input) {
         String[] inputArray = input.split(" ");
@@ -78,5 +86,9 @@ public class RpnCalculator {
                 handler.print(failedNum);
             }
         }
+    }
+
+    public LinkedList<Double> getNumStack() {
+        return numStack;
     }
 }

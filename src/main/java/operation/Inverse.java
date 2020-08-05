@@ -1,5 +1,11 @@
 package operation;
 
+
+/**
+ * @ClassName: Inverse
+ * @Description: Define a Inverse class to support the undo operation
+ * @author Yicun Hou
+ */
 public class Inverse {
     public static Double run(Double a, Double b, Operators op) {
         switch(op) {

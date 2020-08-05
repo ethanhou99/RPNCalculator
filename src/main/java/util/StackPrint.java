@@ -2,6 +2,12 @@ package util;
 
 import java.util.LinkedList;
 
+
+/**
+ * @ClassName: StackPrint
+ * @Description: Define a StackPrint class to print the result in numStack
+ * @author Yicun Hou
+ */
 public class StackPrint {
     LinkedList<Double> numStack;
     private static final String REDUNDANT_ZEROS = "\\.*0*$";
