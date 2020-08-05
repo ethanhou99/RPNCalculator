@@ -42,7 +42,7 @@ public class RPNCalculatorTest {
         rpc.calculate("2 sqrt");
         assertEquals((Double)Math.sqrt(2), rpc.getNumStack().peek());
         assertEquals("stack: 5 2\n" + "stack: \n" +
-                "stack: 1.4142135624\n", outContent.toString());
+                "stack: 1.4142135623\n", outContent.toString());
 
 
         //example3: 5 2 - | 3 - |clear
@@ -55,7 +55,7 @@ public class RPNCalculatorTest {
         assertEquals(0,  rpc.getNumStack().size());
         assertEquals("stack: 5 2\n" +
                 "stack: \n" +
-                "stack: 1.4142135624\n" +
+                "stack: 1.4142135623\n" +
                 "stack: \n" +
                 "stack: 3\n" +
                 "stack: 0\n" +
@@ -74,7 +74,7 @@ public class RPNCalculatorTest {
         assertEquals(5, rpc.getNumStack().peek().intValue());
         assertEquals("stack: 5 2\n" +
                 "stack: \n" +
-                "stack: 1.4142135624\n" +
+                "stack: 1.4142135623\n" +
                 "stack: \n" +
                 "stack: 3\n" +
                 "stack: 0\n" +
@@ -95,7 +95,7 @@ public class RPNCalculatorTest {
         assertEquals(10.5, rpc.getNumStack().peek().doubleValue(), 0.0000000001);
         assertEquals("stack: 5 2\n" +
                 "stack: \n" +
-                "stack: 1.4142135624\n" +
+                "stack: 1.4142135623\n" +
                 "stack: \n" +
                 "stack: 3\n" +
                 "stack: 0\n" +
@@ -136,7 +136,7 @@ public class RPNCalculatorTest {
         assertEquals(1, rpc.getNumStack().size());
         assertEquals("stack: 5 2\n" +
                 "stack: \n" +
-                "stack: 1.4142135624\n" +
+                "stack: 1.4142135623\n" +
                 "stack: \n" +
                 "stack: 3\n" +
                 "stack: 0\n" +

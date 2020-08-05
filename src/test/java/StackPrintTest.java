@@ -37,7 +37,7 @@ public class StackPrintTest {
         stack.add(6.59374507345458723);
         StackPrint sp = new StackPrint(stack);
         sp.print();
-        assertEquals("stack: 6.5937450735 2.5937450746 1\n", outContent.toString());
+        assertEquals("stack: 6.5937450734 2.5937450745 1\n", outContent.toString());
     }
 
     @Test
