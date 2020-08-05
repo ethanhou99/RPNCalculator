@@ -7,8 +7,8 @@ import util.StackPrint;
 import java.util.*;
 
 public class RpnCalculator {
-    private LinkedList<Double> numStack;
-    private LinkedList<Object> history;
+    private final LinkedList<Double> numStack;
+    private final LinkedList<Object> history;
 
     public RpnCalculator() {
         numStack  = new LinkedList<>();
@@ -54,11 +54,10 @@ public class RpnCalculator {
                                 SquareRoot.run(numStack);
                                 break;
                             case UNDO:
-                                System.out.println(history.toString());
-                                undo();
+                                Undo.run(history, numStack);
                                 break;
                             case CLEAR:
-                                clear();
+                                Clear.run(history, numStack);
                                 break;
                             default:
                                 break;
@@ -73,29 +72,6 @@ public class RpnCalculator {
         if (error) {
             ErrorHandler handler = new ErrorHandler();
             handler.print(failedNum);
-        }
-    }
-
-    private void clear() {
-        numStack.clear();
-        history.clear();
-    }
-
-    private void undo() {
-        if (history.size() > 0) {
-            Object item = history.pollFirst();
-            if (item.getClass().isAssignableFrom(Operators.class)) {
-                Double result = numStack.pollFirst();
-                Double a = Double.parseDouble(history.peekFirst().toString());
-                Object b = history.get(1);
-                if (b.getClass().isAssignableFrom(Operators.class)) {
-                    b = Inverse.run(result, a, (Operators) b);
-                }
-                numStack.offerFirst(Double.valueOf(b.toString()));
-                numStack.offerFirst(a);
-            } else {
-                numStack.pollFirst();
-            }
         }
     }
 }
