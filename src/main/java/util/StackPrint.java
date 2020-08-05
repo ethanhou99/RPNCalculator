@@ -1,5 +1,7 @@
 package util;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.LinkedList;
 
 
@@ -23,7 +25,8 @@ public class StackPrint {
                 if (num % 1 == 0) {
                     System.out.print(num.intValue());
                 } else {
-                    System.out.print(String.format("%.10f", num).replaceAll(REDUNDANT_ZEROS, ""));
+                    double result = new BigDecimal(num).setScale(10, RoundingMode.FLOOR).doubleValue();
+                    System.out.print(result);
                 }
                 if (i > 0) {
                     System.out.print(" ");
