@@ -57,3 +57,22 @@ This is a commandline-based Reverse Polish Notation(RPN) calculator.
 |Square Root| sqrt | `4 sqrt` | 2|
 |Undo | undo |`1 2 *` | `1 2` |
 |Clear| clear | `1 2 *` | empty stack |
+
+## Test Results
+```
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running ErrorHandlerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 sec
+Running InputCheckerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running StackPrintTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running RPNCalculatorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+
+Results :
+
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+```
